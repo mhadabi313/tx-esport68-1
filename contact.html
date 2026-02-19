@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TX Esports | Contact Us</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Vazirmatn:wght@400;500;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="icon" type="image/x-icon" href="assets/images/logo-withoutbackground.ico">
+</head>
+
+<body class="page-contact">
+    <div class="bg-layer"></div>
+    <header class="site-header">
+        <a class="brand" href="index.html">
+            <img src="assets/images/logo-withoutbackground.png" alt="TX logo" />
+            <span>TX ESPORTS</span>
+        </a>
+
+        <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+
+        <nav class="site-nav">
+            <a href="index.html" data-en="Home" data-fa="خانه">Home</a>
+            <a href="team.html" data-en="Our Team" data-fa="تیم ما">Our Team</a>
+            <a href="join.html" data-en="Join Us" data-fa="عضویت">Join Us</a>
+            <a class="active" href="contact.html" data-en="Contact Us" data-fa="ارتباط با ما">Contact Us</a>
+        </nav>
+
+        <button class="lang-switch" type="button" data-en="FA" data-fa="EN">FA</button>
+    </header>
+
+    <main>
+        <section class="page-hero reveal">
+            <p class="eyebrow" data-en="Connection" data-fa="ارتباط">Connection</p>
+            <h1 data-en="Contact Us" data-fa="ارتباط با ما">Contact Us</h1>
+            <p data-en="For scrims, sponsorships, media, or collaborations, reach out through the channels below and share full details about your request. The more context you provide, the faster our management team can route your message to the right person and respond with a clear answer."
+                data-fa="برای اسکریم، اسپانسرینگ، رسانه یا همکاری، از طریق راه های زیر با ما در تماس باش و جزئیات کامل درخواستت را ارسال کن. هرچه اطلاعات دقیق تری بدهی، تیم مدیریت سریع تر پیام را به فرد مناسب منتقل می کند و پاسخ شفاف تری دریافت می کنی.">
+                For scrims, sponsorships, media, or collaborations, reach out through the channels below and share full details about your request. The more context you provide, the faster our management team can route your message to the right person and respond with
+                a clear answer.
+            </p>
+        </section>
+
+        <section class="section reveal">
+            <div class="card-grid contact-grid">
+                <article class="info-card">
+                    <h3 data-en="Discord" data-fa="دیسکورد">Discord</h3>
+                    <p data-en="Join our official server for scrim requests, live updates, and direct community communication." data-fa="برای درخواست اسکریم، دریافت خبرهای زنده و ارتباط مستقیم با جامعه TX به سرور رسمی ما بپیوند.">
+                        Join our official server for scrim requests, live updates, and direct community communication.
+                    </p>
+                </article>
+                <article class="info-card">
+                    <h3 data-en="Email" data-fa="ایمیل">Email</h3>
+                    <p data-en="Use email for business inquiries, sponsorship proposals, and formal partnership discussions." data-fa="برای درخواست های رسمی تجاری، پیشنهاد اسپانسرینگ و مذاکره همکاری حرفه ای از ایمیل استفاده کن.">
+                        Use email for business inquiries, sponsorship proposals, and formal partnership discussions.
+                    </p>
+                </article>
+                <article class="info-card">
+                    <h3 data-en="Instagram" data-fa="اینستاگرام">Instagram</h3>
+                    <p data-en="Follow our page for match highlights, roster news, and behind-the-scenes team content." data-fa="برای دیدن هایلایت مسابقات، اخبار ترکیب تیم و محتوای پشت صحنه صفحه ما را دنبال کن.">
+                        Follow our page for match highlights, roster news, and behind-the-scenes team content.
+                    </p>
+                </article>
+            </div>
+
+            <form class="form-card compact" action="https://formsubmit.co/mhadabi313@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="TX Esports | New Contact Message" />
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_template" value="table" />
+
+                <label data-en="Your Name" data-fa="نام شما" for="name">Your Name</label>
+                <input id="name" name="full_name" type="text" data-en-placeholder="Full name" data-fa-placeholder="نام کامل" placeholder="Full name" required />
+
+                <label data-en="Email" data-fa="ایمیل" for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="name@example.com" required />
+
+                <label data-en="Message" data-fa="پیام" for="message">Message</label>
+                <textarea id="message" name="message" rows="4" data-en-placeholder="How can we help?" data-fa-placeholder="چطور می توانیم کمک کنیم؟" placeholder="How can we help?" required></textarea>
+
+                <button type="submit" class="btn btn-primary" data-en="Send Message" data-fa="ارسال پیام">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> TX Esports</p>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.11/dist/lenis.css">
+    <script src="https://unpkg.com/lenis@1.3.11/dist/lenis.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const lenis = new Lenis({
+                lerp: 0.070,
+                smoothWheel: true,
+            });
+
+            function raf(time) {
+                lenis.raf(time);
+                requestAnimationFrame(raf);
+            }
+            requestAnimationFrame(raf);
+        });
+    </script>
+
+</body>
+
+</html>
