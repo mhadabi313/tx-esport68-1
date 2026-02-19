@@ -183,5 +183,57 @@ document.querySelectorAll("form[action*='formsubmit.co']").forEach((form) => {
   });
 });
 
+function initTeamGameFilter() {
+  const filterNav = document.querySelector(".team-games-nav");
+  if (!filterNav) return;
+
+  const chips = filterNav.querySelectorAll(".game-chip[data-game]");
+  const cards = document.querySelectorAll(".team-grid .player-card[data-game]");
+  if (!chips.length || !cards.length) return;
+
+  const applyFilter = (game) => {
+    cards.forEach((card) => {
+      const matches = game === "all" || card.dataset.game === game;
+      card.classList.toggle("is-hidden", !matches);
+    });
+
+    chips.forEach((chip) => {
+      const isActive = chip.dataset.game === game;
+      chip.classList.toggle("active", isActive);
+      if (isActive) {
+        chip.setAttribute("aria-current", "page");
+      } else {
+        chip.removeAttribute("aria-current");
+      }
+    });
+  };
+
+  chips.forEach((chip) => {
+    chip.addEventListener("click", (event) => {
+      event.preventDefault();
+      applyFilter(chip.dataset.game || "all");
+    });
+  });
+
+  applyFilter("all");
+}
+
+function initHomeMerchFade() {
+  if (!document.body.classList.contains("page-home")) return;
+
+  const updateOpacity = () => {
+    const maxScroll = Math.max(1, window.innerHeight * 1.4);
+    const progress = Math.min(1, window.scrollY / maxScroll);
+    const opacity = 0.52 - progress * 0.52;
+    document.body.style.setProperty("--home-merch-opacity", opacity.toFixed(3));
+  };
+
+  updateOpacity();
+  window.addEventListener("scroll", updateOpacity, { passive: true });
+  window.addEventListener("resize", updateOpacity);
+}
+
 initEnterOverlay();
 applyLanguage(storedLang);
+initTeamGameFilter();
+initHomeMerchFade();

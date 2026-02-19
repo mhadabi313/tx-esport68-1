@@ -31,7 +31,6 @@
 
         <button class="lang-switch" type="button" data-en="FA" data-fa="EN">FA</button>
     </header>
-
     <main>
         <section class="page-hero reveal">
             <p class="eyebrow" data-en="Roster" data-fa="لیست تیم">Roster</p>
@@ -43,8 +42,37 @@
         </section>
 
         <section class="section reveal">
+            <nav class="game-nav team-games-nav" aria-label="Filter players by game">
+                <a class="game-chip active" href="#" data-game="all" aria-current="page">
+                    <span>All</span>
+                </a>
+                <a class="game-chip" href="#" data-game="apex">
+                    <img src="assets/images/apex.png" alt="Apex Legends icon" />
+                    <span>Apex Legend</span>
+                </a>
+                <a class="game-chip" href="#" data-game="fortnite">
+                    <img src="assets/images/Fortnite.png" alt="Fortnite icon" />
+                    <span>Fortnite</span>
+                </a>
+                <a class="game-chip" href="#" data-game="r6">
+                    <img src="assets/images/rainbow-six.png" alt="Rainbow Six Siege icon" />
+                    <span>Rainbow Six Siege</span>
+                </a>
+                <a class="game-chip" href="#" data-game="valorant">
+                    <img src="assets/images/valorant-Logo.jpg" alt="Valorant icon" />
+                    <span>Valorant</span>
+                </a>
+                <a class="game-chip" href="#" data-game="warzone">
+                    <img src="assets/images/call-of-duty-warzon.png" alt="Call of Duty Warzone icon" />
+                    <span>COD Warzone</span>
+                </a>
+                <a class="game-chip" href="#" data-game="codmobile">
+                    <img src="assets/images/call-of-duty-mobile.jpg" alt="Call of Duty Mobile icon" />
+                    <span>COD Mobile</span>
+                </a>
+            </nav>
             <div class="card-grid team-grid">
-                <article class="player-card">
+                <article class="player-card" data-game="apex">
                     <img class="player-image" src="assets/images/player1-merch.jpg" alt="ABOLRAHIMI player portrait" />
                     <h3>ABOLRAHIMI</h3>
                     <p class="role" data-en="-" data-fa="-">-</p>
@@ -52,7 +80,7 @@
                         -
                     </p>
                 </article>
-                <article class="player-card">
+                <article class="player-card" data-game="fortnite">
                     <img class="player-image" src="assets/images/player2-merch.jpg" alt="REZA player portrait" />
                     <h3>REZA</h3>
                     <p class="role" data-en="-" data-fa="-">-</p>
@@ -60,7 +88,7 @@
                         -
                     </p>
                 </article>
-                <article class="player-card">
+                <article class="player-card" data-game="r6">
                     <img class="player-image" src="assets/images/player3-merch.jpg" alt="POUYAHM player portrait" />
                     <h3>POUYAHM</h3>
                     <p class="role" data-en="-" data-fa="-">-</p>
@@ -68,7 +96,7 @@
                         -
                     </p>
                 </article>
-                <article class="player-card">
+                <article class="player-card" data-game="valorant">
                     <img class="player-image" src="assets/images/player4-merch.jpg" alt="MAYZETTV player portrait" />
                     <h3>MAYZETTV</h3>
                     <p class="role" data-en="-" data-fa="-">-</p>
@@ -76,7 +104,7 @@
                         -
                     </p>
                 </article>
-                <article class="player-card">
+                <article class="player-card" data-game="warzone">
                     <img class="player-image" src="assets/images/player5-merch.jpg" alt="REZANOISE player portrait" />
                     <h3>REZINOISE</h3>
                     <p class="role" data-en="-" data-fa="-">-</p>
@@ -84,7 +112,7 @@
                         -
                     </p>
                 </article>
-                <article class="player-card">
+                <article class="player-card" data-game="codmobile">
                     <img class="player-image" src="assets/images/player6-merch.jpg" alt="AMIRGHOST player portrait" />
                     <h3>AMIRGHOST</h3>
                     <p class="role" data-en="-" data-fa="-">-</p>
@@ -121,3 +149,5 @@
 </body>
 
 </html>
+
+
