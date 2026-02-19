@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TX Esports | Our Team</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Vazirmatn:wght@400;500;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="icon" type="image/x-icon" href="assets/images/logo-withoutbackground.ico">
+</head>
+
+<body class="page-team">
+    <div class="bg-layer"></div>
+    <header class="site-header">
+        <a class="brand" href="index.html">
+            <img src="assets/images/logo-withoutbackground.png" alt="TX logo" />
+            <span>TX ESPORTS</span>
+        </a>
+
+        <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+
+        <nav class="site-nav">
+            <a href="index.html" data-en="Home" data-fa="خانه">Home</a>
+            <a class="active" href="team.html" data-en="Our Team" data-fa="تیم ما">Our Team</a>
+            <a href="join.html" data-en="Join Us" data-fa="عضویت">Join Us</a>
+            <a href="contact.html" data-en="Contact Us" data-fa="ارتباط با ما">Contact Us</a>
+        </nav>
+
+        <button class="lang-switch" type="button" data-en="FA" data-fa="EN">FA</button>
+    </header>
+
+    <main>
+        <section class="page-hero reveal">
+            <p class="eyebrow" data-en="Roster" data-fa="لیست تیم">Roster</p>
+            <h1 data-en="Our Team" data-fa="تیم ما">Our Team</h1>
+            <p data-en="Meet the core squad driving TX Esports in every tournament, practice block, and high-pressure qualifier. Each player brings a unique role, but all of them share the same standard: discipline, consistency, and complete trust in team play."
+                data-fa="با ترکیب اصلی TX Esports آشنا شو؛ تیمی که در هر تورنمنت، تمرین و رقابت فشرده می درخشد. هر بازیکن نقش متفاوتی دارد اما همه یک استاندارد مشترک دارند: نظم، ثبات عملکرد و اعتماد کامل به بازی تیمی.">
+                Meet the core squad driving TX Esports in every tournament, practice block, and high-pressure qualifier. Each player brings a unique role, but all of them share the same standard: discipline, consistency, and complete trust in team play.
+            </p>
+        </section>
+
+        <section class="section reveal">
+            <div class="card-grid team-grid">
+                <article class="player-card">
+                    <img class="player-image" src="assets/images/player1-merch.jpg" alt="ABOLRAHIMI player portrait" />
+                    <h3>ABOLRAHIMI</h3>
+                    <p class="role" data-en="-" data-fa="-">-</p>
+                    <p data-en="-" data-fa="-">
+                        -
+                    </p>
+                </article>
+                <article class="player-card">
+                    <img class="player-image" src="assets/images/player2-merch.jpg" alt="REZA player portrait" />
+                    <h3>REZA</h3>
+                    <p class="role" data-en="-" data-fa="-">-</p>
+                    <p data-en="-" data-fa="-">
+                        -
+                    </p>
+                </article>
+                <article class="player-card">
+                    <img class="player-image" src="assets/images/player3-merch.jpg" alt="POUYAHM player portrait" />
+                    <h3>POUYAHM</h3>
+                    <p class="role" data-en="-" data-fa="-">-</p>
+                    <p data-en="-" data-fa="-">
+                        -
+                    </p>
+                </article>
+                <article class="player-card">
+                    <img class="player-image" src="assets/images/player4-merch.jpg" alt="MAYZETTV player portrait" />
+                    <h3>MAYZETTV</h3>
+                    <p class="role" data-en="-" data-fa="-">-</p>
+                    <p data-en="-" data-fa="-">
+                        -
+                    </p>
+                </article>
+                <article class="player-card">
+                    <img class="player-image" src="assets/images/player5-merch.jpg" alt="REZANOISE player portrait" />
+                    <h3>REZINOISE</h3>
+                    <p class="role" data-en="-" data-fa="-">-</p>
+                    <p data-en="-" data-fa="-">
+                        -
+                    </p>
+                </article>
+                <article class="player-card">
+                    <img class="player-image" src="assets/images/player6-merch.jpg" alt="AMIRGHOST player portrait" />
+                    <h3>AMIRGHOST</h3>
+                    <p class="role" data-en="-" data-fa="-">-</p>
+                    <p data-en="-" data-fa="-">
+                        -
+                    </p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> TX Esports</p>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.11/dist/lenis.css">
+    <script src="https://unpkg.com/lenis@1.3.11/dist/lenis.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const lenis = new Lenis({
+                lerp: 0.070,
+                smoothWheel: true,
+            });
+
+            function raf(time) {
+                lenis.raf(time);
+                requestAnimationFrame(raf);
+            }
+            requestAnimationFrame(raf);
+        });
+    </script>
+
+</body>
+
+</html>
